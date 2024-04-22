@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="title">
+    <h2>Controle de estoque</h2>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <a href="/add">Adicionar pão</a>
+        </div>
+        <div class="col-xs-12">
+            <table class="table table-bordered tale-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Id:</th>
+                        <th>Nome:</th>
+                        <th>Quantidade:</th>
+                        <th>Preço:</th>
+                        <th>Ações:</th>
+                    </tr>
+                </thead>
+                <tbody>
+            {% for i in padariaestoque %}
+                    <tr>
+                        <td>{{i.Id}}</td>
+                        <td>{{i.Nome}}</td>
+                        <td>{{i.Quantidade}}</td>
+                        <td>{{i.Preço}}</td>
+                        <td>
+                            <a href="/edit/{{i.id}}">Editar</a>
+                            <a href="/delete/{{i.id}}">Excluir</a>
+                        </td>
+                    </tr>
+            {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% blockcontent %}
+
+<form action="/add" class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <input type="text" name="nome" placeholder="Nome" class="form-control" />
+    </div>
+    <div class="col-md-6">
+      <input
+        type="text"
+        name="quantidade"
+        placeholder="Quantidade"
+        class="form-control"
+      />
+    </div>
+    <div class="col-md-6">
+      <input
+        type="text"
+        name="preco"
+        placeholder="Preço"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <br />
+  <div class="row col-xs-12">
+    <button type="submit" class="btn tn-block btn-sucess">Enviar</button>
+  </div>
+</form>
+
+{% endblock content %}
